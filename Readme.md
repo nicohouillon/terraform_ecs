@@ -1,4 +1,3 @@
-
 Technical assignment: 
 
 we assume a docker container is pre mad an d contain the application to be deployed, 
@@ -20,4 +19,3 @@ cd ../ecs and re run terraform plan  (that part is sending errors on task defini
 
 Once ecs cluster is deployed, docker image can be push to ECR this way :
 aws ecr get-login --region <your region> --no-include-email
-
