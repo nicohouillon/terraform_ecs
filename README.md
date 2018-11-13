@@ -4,8 +4,8 @@ deploy infrastructure for AWS ECS,ALB
 **
 
 run 
-terraform init
-#to deploy the first part of the infrastructure (VPC,subnet,Security groups,redis 
+terraform init 
+to deploy the first part of the infrastructure (VPC,subnet,Security groups,redis 
 cluster,  Application load balancer)
 
 terraform plan  
