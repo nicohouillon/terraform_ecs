@@ -1,18 +1,18 @@
-Technical assignment: 
-** terraform_ecs
-deploy infrastructure for AWS ECS,ALB 
-**
+Technical assignment:
 
-run 
-terraform init 
-to deploy the first part of the infrastructure (VPC,subnet,Security groups,redis 
-cluster,  Application load balancer)
+we assume a docker container is pre mad an d contain the application to be deployed, this will only deploy the infrastructure (VPV, Security groups, ALB, Redis, ECS(Fargate) ) .
 
-terraform plan  
+git clone https://github.com/nicohouillon/terraform_ecs
+cd infastructure run terraform init
 
-#to deploy ECS cluster, cd ../ecs and re run terraform plan  (that part is sedngin erros on task definiation I couldn't solve).
+to deploy the first part of the infrastructure (VPC,subnet,Security groups,redis
 
-***
+cluster, Application load balancer)
 
-Once ecs cluster is deployed, docker image can be push to ECR this way :
-aws ecr get-login --region <your region> --no-include-email
+terraform plan
+
+to deploy ECS cluster:
+
+cd ../ecs and re run terraform plan (that part is sending errors on task definitions that I couldn't solve) .
+
+Once ecs cluster is deployed, docker image can be push to ECR this way : aws ecr get-login --region --no-include-email
